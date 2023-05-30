@@ -101,7 +101,7 @@
       </div>
 <br>
 
-<script src="https://www.youtube.com/iframe_api" defer></script>
+
 <script>
   // YouTube API callback function
   function onYouTubeIframeAPIReady() {
@@ -544,5 +544,7 @@
         return false;
     });
   </script>
+  <!-- Loading Youtube API at last to reduce the load-->
+  <script src="https://www.youtube.com/iframe_api" defer></script>
 </body>
 </html>
