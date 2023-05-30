@@ -1,0 +1,19 @@
+defaults:
+  # Set cache headers for specific file types
+  - scope:
+      path: "*.css"
+    values:
+      cache-control: "max-age=31536000"
+  - scope:
+      path: "*.js"
+    values:
+      cache-control: "max-age=31536000"
+  - scope:
+      path: "*.jpg"
+    values:
+      cache-control: "max-age=31536000"
+  # Set cache headers for a specific directory
+  - scope:
+      path: "images/"
+    values:
+      cache-control: "max-age=31536000"
