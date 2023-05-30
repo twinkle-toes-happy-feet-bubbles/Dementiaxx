@@ -100,29 +100,57 @@
 
 
 <script>
-  // YouTube API callback function
-  function onYouTubeIframeAPIReady() {
-    var player;
-    var thumbnail = document.getElementById('thumbnail');
-    var playerContainer = document.getElementById('player');
+  var player;
+var thumbnail = document.getElementById('thumbnail');
+var playerContainer = document.getElementById('player');
 
-    // Load video on thumbnail click
-    thumbnail.addEventListener('click', function() {
-      thumbnail.style.display = 'none';
-      var videoId = 'Dm2zZKhCf94'; // Replace with the YouTube video ID
-      player = new YT.Player('player', {
-        videoId: videoId,
-        events: {
-          'onReady': onPlayerReady
-        }
-      });
-    });
-
-    // When the player is ready, play the video
-    function onPlayerReady(event) {
-      event.target.playVideo();
+// Callback function to be executed when the YouTube API script is loaded
+function onYouTubeAPILoaded(delay) {
+  setTimeout( function(){
+  console.log('Player ready');
+  thumbnail.style.display = 'none';
+  var videoId = 'Dm2zZKhCf94'; // Replace with the YouTube video ID
+  player = new YT.Player('player', {
+    videoId: videoId,
+    events: {
+      'onReady': onPlayerReady
     }
+  });
+  },delay);
+}
+
+// Load video on thumbnail click
+thumbnail.addEventListener('click', function() {
+  console.log('Thumbnail clicked');
+  loadYouTubeAPI();
+});
+
+// Load YouTube API script
+function loadYouTubeAPI() {
+  // Check if the API is already loaded
+  if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
+    // Create a script tag and set the source to the YouTube iframe API
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+
+    // Append the script tag to the document head
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+    onYouTubeAPILoaded(999);
+   
+  } else {
+    // If the API is already loaded, directly call the callback function
+    onYouTubeAPILoaded();
   }
+}
+
+// When the player is ready, play the video
+function onPlayerReady(event) {
+  console.log('Video playing');
+  event.target.playVideo();
+}
+
 </script>
 
       
@@ -470,13 +498,14 @@
     </div>
   </footer>
   <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <!--
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js" defer></script>
   <script src="http://www.dementiaxx.com/assets/js/validate.js" type="text/javascript" defer></script>
   <script src="http://www.dementiaxx.com/assets/js/swiper.min.js" type="text/javascript" defer></script>
   <script type="text/javascript" src="http://www.dementiaxx.com/assets/js/sleekslider.min.js" defer></script>
   <script type="text/javascript" src="http://www.dementiaxx.com/assets/js/app.js" defer></script>
   <script src="http://www.dementiaxx.com/assets/js/template.js?v=0.1" defer></script>
-  
+  -->
   
   
   <!-- -->
@@ -515,9 +544,9 @@
  
   <!-- -->
   
+  <!--
   
-  
-  <script type="text/javascript">
+  <script type="text/javascript" defer>
 
     $('.add_cart').on('click', function() {
         var id = $(this).attr('lang');
@@ -543,8 +572,8 @@
         return false;
     });
   </script>
+  -->
   
- <!--Youtube API loading at last -->
- <script src="https://www.youtube.com/iframe_api" defer></script>
+ 
 </body>
 </html>
