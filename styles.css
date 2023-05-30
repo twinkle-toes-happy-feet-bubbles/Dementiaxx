@@ -1,3 +1,25 @@
+/*********
+Font awesome
+*********/
+
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */@font-face{font-family:FontAwesome;src:url(https://twinkle-toes-happy-feet-bubbles.github.io/fonts/fontawesome-webfont.eot?v=4.7.0);src:url(https://twinkle-toes-happy-feet-bubbles.github.io/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format('embedded-opentype'),url(https://twinkle-toes-happy-feet-bubbles.github.io/fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2'),url(https://twinkle-toes-happy-feet-bubbles.github.io/fonts/fontawesome-webfont.woff?v=4.7.0) format('woff'),url(https://twinkle-toes-happy-feet-bubbles.github.io/fonts/fontawesome-webfont.ttf?v=4.7.0) format('truetype'),url(https://twinkle-toes-happy-feet-bubbles.github.io/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+ 
+ 
+ /*********
+ Swiper.min.css
+ *********/
+ 
+ .swiper-container{margin:0 auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-transition-property:-webkit-transform;transition-property:-webkit-transform;-o-transition-property:transform;transition-property:transform;transition-property:transform,-webkit-transform;-webkit-box-sizing:content-box;box-sizing:content-box}.swiper-wrapper{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}@-webkit-keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+ 
+ /*********
+ Slider.css
+ *********/
+ 
+ html{line-height:1}ul{list-style:none}a img{border:none}figure,footer,header,main,menu,nav,section{display:block}*,:after,:before{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.sleekslider{width:100%;height:400px;position:relative;display:block;overflow:hidden}span.s-p{color:#e45753}@media (max-width:1024px){.sleekslider{width:100%;height:700px;position:relative;display:block;overflow:hidden}}@media (max-width:991px){.sleekslider{width:100%;height:650px;position:relative;display:block;overflow:hidden}}@media (max-width:800px){.sleekslider{width:100%;height:550px;position:relative;display:block;overflow:hidden}}@media (max-width:640px){.sleekslider{width:100%;height:500px;position:relative;display:block;overflow:hidden}}@media (max-width:568px){.sleekslider{width:100%;height:450px;position:relative;display:block;overflow:hidden}}@media (max-width:414px){.sleekslider{width:100%;height:380px;position:relative;display:block;overflow:hidden}}@media (max-width:375px){.sleekslider{width:100%;height:320px;position:relative;display:block;overflow:hidden}}@media (max-width:320px){.sleekslider{width:100%;height:290px;position:relative;display:block;overflow:hidden}}
+
 /**********
 LAZY LOAD IMAGES
 **********/
